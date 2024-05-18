@@ -11,3 +11,8 @@ kubectl apply -f /Users/Serafima/OneDrive/Desktop/flask_app_deployment.yaml
 kubectl apply -f /Users/Serafima/OneDrive/Desktop/flask_app_service.yaml
 kubectl apply -f /Users/Serafima/OneDrive/Desktop/script_deployment.yaml
 
+# Применение манифестов конфигураций Istio
+kubectl apply -f /Users/Serafima/OneDrive/Desktop/external_service_entry.yaml
+kubectl apply -f /Users/Serafima/OneDrive/Desktop/app_ingress_gateway.yaml
+kubectl apply -f /Users/Serafima/OneDrive/Desktop/app_virtual_service.yaml
+
