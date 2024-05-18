@@ -1,0 +1,17 @@
+# Используем официальный образ Python версии 3.9 в качестве базового
+FROM python:3.9
+
+# Устанавливаем необходимый пакет requests
+RUN pip install requests
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем файл 5sec_requests.py внутрь контейнера в директорию /app
+COPY 5sec_requests.py /app
+
+# Открываем порт 8001 для взаимодействия с приложением
+EXPOSE 8001
+
+# Запускаем скрипт 5sec_requests.py при запуске контейнера
+CMD ["python", "5sec_requests.py"]
